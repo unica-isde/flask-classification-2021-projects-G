@@ -18,7 +18,7 @@ function update(jobId) {
                     $('#spinner').hide();
                     $('#waitText').text("");
                     makeGraph(data['data']);
-					showDownloadBtn();
+					showDlButtons();
                     break;
                 case "started":
                     $('#waitText').text("Job started...");
@@ -85,9 +85,9 @@ function makeGraph(results) {
     });
 }
 
-function showDownloadBtn() {
-	var elements = document.getElementsByClassName("dl");
-	for (btn of elements){
+function showDlButtons() {
+	var buttons = document.getElementsByClassName("dl");
+	for (btn of buttons){
 		btn.removeAttribute("hidden");
 	}
 }

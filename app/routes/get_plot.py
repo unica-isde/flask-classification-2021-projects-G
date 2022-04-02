@@ -1,4 +1,3 @@
-import io
 import json
 from app import app
 from flask import Response, abort
