@@ -4,6 +4,13 @@ from matplotlib.figure import Figure
 
 
 def generate(labels, values):
+    """! Generate a plot image
+
+    @param labels The classification labels.
+    @param values Prediction scores for the labels.
+
+    @return The plotted data as a PNG image.
+    """
 
     colors = ["olivedrab", "yellowgreen", "seagreen", "teal", "palegreen"]
 
