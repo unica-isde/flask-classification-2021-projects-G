@@ -18,6 +18,7 @@ function update(jobId) {
                     $('#spinner').hide();
                     $('#waitText').text("");
                     makeGraph(data['data']);
+					showDownloadBtn();
                     break;
                 case "started":
                     $('#waitText').text("Job started...");
@@ -82,4 +83,11 @@ function makeGraph(results) {
             }
         }
     });
+}
+
+function showDownloadBtn() {
+	var elements = document.getElementsByClassName("dl");
+	for (btn of elements){
+		btn.removeAttribute("hidden");
+	}
 }
