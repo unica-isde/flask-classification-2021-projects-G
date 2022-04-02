@@ -8,3 +8,4 @@ redis~=3.5.3
 rq~=1.5.2
 flask-wtf~=0.14.3
 markupsafe==2.0.1 #required due to jinja/flask constraint
+matplotlib~=3.4.3 #required for plotting in issue 02
