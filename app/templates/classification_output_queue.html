@@ -10,6 +10,9 @@
             margin: 0 auto;
         }
 
+		.dl {
+			margin-top: 1%;
+		}
 
     </style>
     <div class="row">
@@ -33,6 +36,9 @@
 
 
                 <a class="btn btn-dark" href="/classifications" role="button">Back</a>
+				<a hidden class="dl btn btn-light" role="button" href="{{ url_for('get_plot', job_id=jobID) }}">Download Plot</a>
+				<a hidden class="dl btn btn-light" role="button" href="{{ url_for('get_json', job_id=jobID) }}">Download JSON</a>
+
             </div>
         </div>
     </div>
