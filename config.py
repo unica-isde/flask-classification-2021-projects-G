@@ -17,3 +17,4 @@ class Configuration:
 
     REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/0"
     QUEUE = "classification"
+    QUEUE_HIST = "histogram"
