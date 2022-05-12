@@ -12,7 +12,7 @@ config = Configuration()
 
 
 @app.route('/classifications_upload', methods=['GET', 'POST'])
-def classifications():
+def classifications_upload():
     """API for selecting and uploading an image from
     the user computer and running a classification job.
     Returns the output score from the model"""
