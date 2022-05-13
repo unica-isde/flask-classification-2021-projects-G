@@ -10,9 +10,6 @@
             margin: 0 auto;
         }
 
-		.dl {
-			margin-top: 1%;
-		}
 
     </style>
     <div class="row">
@@ -26,7 +23,7 @@
         <div class="col">
             <div class="card">
                 <div class="row">
-                    <canvas id="classificationOutput" style="max-width: 500px;"></canvas>
+                    <canvas id="histogramOutput" style="max-width: 500px;"></canvas>
                     <div class="align-items-center">
                         <h2 id="waitText"></h2>
                         <div class="m-5 spinner spinner-border mr-auto spinner-grow text-dark row" id="spinner">
@@ -35,14 +32,11 @@
                 </div>
 
 
-                <a class="btn btn-dark" href="/classifications" role="button">Back</a>
-				<a hidden class="dl btn btn-light" role="button" href="{{ url_for('get_plot', job_id=jobID) }}">Download Plot</a>
-				<a hidden class="dl btn btn-light" role="button" href="{{ url_for('get_json', job_id=jobID) }}">Download JSON</a>
-
+                <a class="btn btn-dark" href="/histogram" role="button">Back</a>
             </div>
         </div>
     </div>
-    <script src="{{ url_for("static", filename="poll.js") }}" id="polling" jobid={{ jobID }}></script>
+    <script src="{{ url_for("static", filename="histogram.js") }}" id="histogram" jobid={{ jobID }}></script>
 
 {% endblock %}
 
