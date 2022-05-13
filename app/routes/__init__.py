@@ -5,3 +5,5 @@ from .home import *
 
 from .histogram import *
 from .histogram_id import *
+from .get_json import *
+from .get_plot import *
