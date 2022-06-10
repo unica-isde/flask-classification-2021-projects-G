@@ -32,6 +32,18 @@ services:
     volumes:
       - ~/.cache/torch:/root/.cache/torch
       - data-volume:/app/app/static/image_uploads:z
+      
+  worker_histogram:
+    build: .
+    command: python worker_histogram.py
+    links:
+      - redisdb
+    environment:
+    - REDIS_HOST=redisdb
+    - REDIS_PORT=6378
+    volumes:
+      - ~/.cache/torch:/root/.cache/torch
+      - data-volume:/app/app/static/image_uploads:z
 
 volumes:
   data-volume:
