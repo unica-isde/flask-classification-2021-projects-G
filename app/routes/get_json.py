@@ -16,7 +16,7 @@ def get_json(job_id):
     data = json_data.fetch(job_id)
    
     if data is None:
-        abort(418)
+        abort(404)
 
     else:
         return Response(data, 

@@ -17,7 +17,7 @@ def get_plot(job_id):
     content = json_data.fetch(job_id)
    
     if content is None:
-        abort(418)
+        abort(404)
 
     else:
         data_dict = json.loads(content)
