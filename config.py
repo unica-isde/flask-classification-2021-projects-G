@@ -18,7 +18,7 @@ class Configuration:
     REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/0"
     QUEUE = "classification"
 
-    UPLOAD_FOLDER =os.path.join(project_root, 'app/static/imagenet_subset_upload')
+    UPLOAD_FOLDER = image_folder_path
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
     QUEUE_HIST = "histogram"
 

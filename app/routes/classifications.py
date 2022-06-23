@@ -75,8 +75,8 @@ def remove_modified_files(path):
 #  check if the input properties are different from the reference value, returns the result
 def some_properties_are_modified(reference_value, *properties):
     properties_modified = False
-    for property in properties:
-        if property != reference_value:
+    for p in properties:
+        if p != reference_value:
             properties_modified = True
 
     return properties_modified
