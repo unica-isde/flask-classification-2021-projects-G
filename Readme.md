@@ -37,9 +37,10 @@ the image directory can be found in the `config.py` file.
 ### Run locally
 
 To run the code without containers, it is sufficient to run 
-separately the `runserver.py` script, and the `worker.py` 
-script. The worker will process jobs stored in the queue. 
-In order for the queue to work, you should have `redis`  
+separately the `runserver.py` script, the `worker.py` and
+`worker_histogram.py` scripts.
+The workers will process the jobs stored in the queues. 
+In order for the queues to work, you should have `redis`  
 installed and running (specify port in `config.py`). 
 
 ### Run inside Docker 
